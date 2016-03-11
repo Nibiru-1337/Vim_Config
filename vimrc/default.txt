@@ -1,0 +1,117 @@
+" *****************************************************************************
+" General settings 
+" *****************************************************************************
+set history=500
+set number
+set ruler
+filetype plugin on
+filetype indent on
+set laststatus=2 "Always sho status line
+set list " Enable hidden char display
+"set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:< "Define space / tab /etc display
+set listchars=tab:>-,trail:.,extends:>,precedes:< "Define space / tab /etc display
+set omnifunc=syntaxcomplete#Complete "display autocompletion (See doc)
+
+
+" *****************************************************************************
+" General UI  
+" *****************************************************************************
+set scrolloff=5
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+set cmdheight=1 "Height of the command bar 
+set hid "Buffer become hidden when it is abandoned
+"set backspace=eol,start,indend "Configure backspace
+set whichwrap+=<,>,h,l
+set ignorecase
+set smartcase
+set incsearch "Better search
+set lazyredraw
+set magic "Regular expressions turn magic on
+set showmatch
+set mat=2 "Tenth of seconde before matching brackets
+
+"No sound on erros
+"set noerrorbells
+"set novisualbell
+
+
+" *****************************************************************************
+" Color and Fonts 
+" *****************************************************************************
+syntax enable
+set background=dark
+colorscheme jellybeans
+"colorscheme solarized
+let g:NERDTreeDirArrowExpandable = '►' "In case there is no powerline font
+let g:NERDTreeDirArrowCollapsible = '▼'
+set encoding=utf-8
+set ffs=unix,dos,mac
+set t_Co=256
+
+" *****************************************************************************
+" Backup - Indend - Tab - Text
+" *****************************************************************************
+"Turn off backup
+set nobackup
+set nowb
+set noswapfile
+"set expandtab "use space instead of tabs
+set smarttab
+set shiftwidth=4 "1 tab for 4 spaces
+set tabstop=4
+set linebreak
+set textwidth=150
+set autoindent
+set smartindent
+set colorcolumn=80
+set wrap
+"vnoremap <silent> * :call VisualSelection('f')<CR>
+
+
+" *****************************************************************************
+" MAP 
+" *****************************************************************************
+" Split map
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Buffer map
+map <leader>bc : Bclase<cr>
+map <leader>bca : 1,100 bc!<cr>
+map <C-I> :bn
+
+
+
+" *****************************************************************************
+" PLUGINS 
+" *****************************************************************************
+"set runtimepath^=~/.vim/bundle/* "Useless cuz of pathogen
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+"nmap <leader>p : CtrlP<cr>
+"nmap <leader>bb: CtrlPBuffer<cr>
+"nmap<leader>bm : CtrlPMixed<cr>
+"nmap <leader>bs :CtrlPMRU<cr>
+
+"Syntastic plugin 
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"Pathogen
+execute pathogen#infect()
+
+
+" *****************************************************************************
+" SpellChecking 
+" *****************************************************************************
+map <leader>sc :setlocal spell!<cr> "Pressing sc toggle and untoggle spellchecking
