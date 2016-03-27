@@ -2,7 +2,8 @@ TO INSTALL:
 1. Clone directory
 2. run command git submodule init
 3. run command git submodule update
-4. go to ~
-5. run command ln -s /path/to/repo/vimrc/default.txt ./.vimrc
-6. run command ln -s /path/to/repo/ ./.vim
-7. enjoy !
+4. go into bundle/powerline-font/ and run install script for fonts
+5. go to ~
+6. run command ln -s /path/to/repo/vimrc/default.txt ./.vimrc
+7. run command ln -s /path/to/repo/ ./.vim
+8. enjoy !
