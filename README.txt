@@ -6,4 +6,5 @@ TO INSTALL:
 5. go to ~
 6. run command ln -s /path/to/repo/vimrc/default.txt ./.vimrc
 7. run command ln -s /path/to/repo/ ./.vim
-8. enjoy !
+8. change terminal font to powerline
+9. enjoy !
