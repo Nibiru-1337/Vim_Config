@@ -8,3 +8,6 @@ TO INSTALL:
 7. run command ln -s /path/to/repo/ ./.vim
 8. change terminal font to powerline
 9. enjoy !
+
+Or if using putty:
+http://pdalinis.blogspot.com/2013/08/putty-powerline.html
